@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Temprel.ProductionTracking">
+
+    <Color x:Key="BackgroundBlue">#c7d8fb</Color>
+    <SolidColorBrush x:Key="BackgroundBlueBrush" Color="{StaticResource BackgroundBlue}"/>
+    <Color x:Key="BackgroundLightGray">#ececec</Color>
+    <SolidColorBrush x:Key="BackgroundLightGrayBrush" Color="{StaticResource BackgroundLightGray}"/>
+
+    <Color x:Key="BackgroundMediumGray">#dbdbdb</Color>
+    <SolidColorBrush x:Key="BackgroundMediumGrayBrush" Color="{StaticResource BackgroundMediumGray}"/>
+
+    <Color x:Key="BackgroundOffWhite">#efefef</Color>
+    <SolidColorBrush x:Key="BackgroundOffWhiteBrush" Color="{StaticResource BackgroundOffWhite}"/>
+
+    <Color x:Key="ForegroundHighlight">#dadada</Color>
+    <SolidColorBrush x:Key="ForegroundHighlightBrush" Color="{StaticResource ForegroundHighlight}"/>
+
+</ResourceDictionary>
