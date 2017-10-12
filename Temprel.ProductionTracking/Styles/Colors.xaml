@@ -2,8 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Temprel.ProductionTracking">
 
-    <Color x:Key="BackgroundBlue">#c7d8fb</Color>
+    <Color x:Key="BackgroundBlue">#c7d8ff</Color>
     <SolidColorBrush x:Key="BackgroundBlueBrush" Color="{StaticResource BackgroundBlue}"/>
+    
     <Color x:Key="BackgroundLightGray">#ececec</Color>
     <SolidColorBrush x:Key="BackgroundLightGrayBrush" Color="{StaticResource BackgroundLightGray}"/>
 

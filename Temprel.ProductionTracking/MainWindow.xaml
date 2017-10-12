@@ -54,7 +54,7 @@
                                     </Grid.RowDefinitions>
                                     
                                     <!--Title Bar-->
-                                    <Border Panel.ZIndex="1" BorderBrush="{StaticResource BackgroundMediumGrayBrush}" BorderThickness="0 0 0 1">
+                                    <Border Panel.ZIndex="1" BorderBrush="{StaticResource BackgroundLightGrayBrush}" BorderThickness="0 0 0 1">
                                         <Grid Background="{StaticResource BackgroundOffWhiteBrush}">
                                             <Grid.ColumnDefinitions>
                                                 <!--Corner Icon-->
@@ -124,14 +124,18 @@
             CornerRadius="0"
             GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
-    <Border Background="{StaticResource BackgroundLightGrayBrush}">
+    <Border Background="{StaticResource BackgroundBlueBrush}">
         <Grid >
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute"
                             Viewport="0 0 800 800" ImageSource="/Images/Backgrounds/SchematicBackground.png"
                             Opacity=".08"/>
             </Grid.Background>
-            
+            <local:PageController
+                d:DataContext=""
+                DataContext="{Binding ApplicationViewModel.CurrentPage,
+                Source={x:Static local:ViewModelLocator.Instance},
+                Converter={local:ApplicationPageValueConverter}}"/>
         </Grid>
     </Border>
 </Window>
