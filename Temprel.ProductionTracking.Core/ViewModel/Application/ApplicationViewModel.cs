@@ -10,6 +10,8 @@
         /// </summary>
         public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Login;
 
+        public BaseViewModel CurrentPageViewModel { get; set; }
+
         /// <summary>
         /// True if the side menu should be shown
         /// </summary>
@@ -24,13 +26,13 @@
         /// Navigates to the specified page
         /// </summary>
         /// <param name="page">the page to go to</param>
-        public void GoToPage(ApplicationPage page)
+        public void GoToPage(ApplicationPage page, BaseViewModel viewModel = null)
         {
+            CurrentPageViewModel = viewModel;
 
             CurrentPage = page;
 
-            //show side menu or not?
-            //SideMenuVisible = page == ApplicationPage.Chat;
+            OnPropertyChanged(nameof(CurrentPage));
         }
     }
 }

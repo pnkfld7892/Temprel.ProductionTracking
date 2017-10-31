@@ -51,6 +51,7 @@ namespace Temprel.ProductionTracking.Core
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
             //bind to a single instance of settings view model
             Kernel.Bind<SettingsViewModel>().ToConstant(new SettingsViewModel());
+            //Bind
         }
         #endregion
         /// <summary>

@@ -1,28 +1,44 @@
-﻿<local:BasePage x:Class="Temprel.ProductionTracking.LoginPage"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Temprel.ProductionTracking"
-             xmlns:core="clr-namespace:Temprel.ProductionTracking.Core;assembly=Temprel.ProductionTracking.Core"
-             mc:Ignorable="d"   
-             x:Name="Page"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Border>
-        
+﻿<local:BasePage x:TypeArguments="core:LoginViewModel" x:Class="Temprel.ProductionTracking.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Temprel.ProductionTracking"
+      xmlns:core="clr-namespace:Temprel.ProductionTracking.Core;assembly=Temprel.ProductionTracking.Core"
+      mc:Ignorable="d"
+                x:Name="Page"
+      >
+    <Border >
         <Grid>
-            <StackPanel
-                TextBlock.TextAlignment="Center">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                            TextBlock.TextAlignment="Center"
+                            >
+                    <Border Background="{StaticResource BackgroundMediumGrayBrush}"
+                            Width="330"
+                            Margin="25"
+                            Padding="25">
+                        <StackPanel >
+                            <TextBlock Text="Login Page" FontSize="{StaticResource FontSizeXXLarge}"/>
+                            <TextBox Tag="Login ID"
+                                     Style="{StaticResource TextBox_TemprelGradientBorder}"/>
+                            <PasswordBox x:Name="PasswordText"
+                                         Style="{StaticResource PasswordBox_TemprelGradientBorder}"
+                                         Tag="Password" 
+                                         Margin="0 0 0 15"
+                                         />
 
-                <Border Background="{StaticResource BackgroundLightGrayBrush}"
-                        Padding="15 50 15 15">
-                    <StackPanel>
-                        <TextBlock Text="Login"/>
-                        <TextBox Tag="UserID"/>
-                        <TextBox Tag="Password"/>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
+                            <Button Content="Login" Margin="0 10" IsDefault="True"
+                                    IsEnabled="{Binding LoginIsRunning,Converter={local:BooleanInvertConverter}}"
+                                    local:IsBusyProperty.Value ="{Binding LoginIsRunning}"
+                                    Command="{Binding LoginCommand}"
+                                    CommandParameter="{Binding ElementName=Page}"
+                                    HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Border>
+    
 </local:BasePage>

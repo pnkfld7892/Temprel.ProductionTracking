@@ -21,5 +21,7 @@
         /// </summary>
         ProdOrder = 2,
 
+        TestPage = 3,
+
     }
 }

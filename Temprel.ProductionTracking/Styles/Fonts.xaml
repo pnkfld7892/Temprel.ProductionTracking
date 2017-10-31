@@ -3,8 +3,14 @@
                     xmlns:local="clr-namespace:Temprel.ProductionTracking"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
     <FontFamily x:Key="FallingSky">pack://application;,,,/Fonts/Falling Sky</FontFamily>
+    <FontFamily x:Key="FontAwesome">pack://application;,,,/Fonts/#FontAwesome</FontFamily>
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource FallingSky}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
         <Setter Property="FontFamily" Value="{StaticResource FallingSky}"/>
         <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"/>
     </Style>

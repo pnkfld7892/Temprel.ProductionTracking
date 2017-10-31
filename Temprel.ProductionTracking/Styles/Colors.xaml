@@ -11,10 +11,22 @@
     <Color x:Key="BackgroundMediumGray">#dbdbdb</Color>
     <SolidColorBrush x:Key="BackgroundMediumGrayBrush" Color="{StaticResource BackgroundMediumGray}"/>
 
+    <Color x:Key="BackgroundDarkGray">#ababab</Color>
+    <SolidColorBrush x:Key="BackgroundDarkGrayBrush" Color="{StaticResource BackgroundDarkGray}"/>
+
     <Color x:Key="BackgroundOffWhite">#efefef</Color>
     <SolidColorBrush x:Key="BackgroundOffWhiteBrush" Color="{StaticResource BackgroundOffWhite}"/>
 
     <Color x:Key="ForegroundHighlight">#dadada</Color>
     <SolidColorBrush x:Key="ForegroundHighlightBrush" Color="{StaticResource ForegroundHighlight}"/>
+
+    <Color x:Key="TemprelYellow">#febe2b</Color>
+    <SolidColorBrush x:Key="TemprelYellowBrush" Color="{StaticResource TemprelYellow}"/>
+
+    <Color x:Key="TemprelOrange">#f3661B</Color>
+    <SolidColorBrush x:Key="TemprelOrangeBrush" Color="{StaticResource TemprelYellow}"/>
+
+    <Color x:Key="TemprelRed">#f13c25</Color>
+    <SolidColorBrush x:Key="TemprelRedBrush" Color="{StaticResource TemprelRed}"/>
 
 </ResourceDictionary>

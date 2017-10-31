@@ -48,7 +48,7 @@
 
                                     <Grid.RowDefinitions>
                                         <!--Title Bar-->
-                                        <RowDefinition Height="{Binding TitleHeightGridLength,FallbackValue=42}"/>
+                                        <RowDefinition Height= "{Binding TitleHeightGridLength,FallbackValue=42}"/>
                                         <!--Main Window content-->
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
@@ -124,18 +124,17 @@
             CornerRadius="0"
             GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
-    <Border Background="{StaticResource BackgroundBlueBrush}">
+    <Border Background="{StaticResource BackgroundDarkGrayBrush}">
         <Grid >
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute"
                             Viewport="0 0 800 800" ImageSource="/Images/Backgrounds/SchematicBackground.png"
                             Opacity=".08"/>
             </Grid.Background>
-            <local:PageController
-                d:DataContext=""
-                DataContext="{Binding ApplicationViewModel.CurrentPage,
-                Source={x:Static local:ViewModelLocator.Instance},
-                Converter={local:ApplicationPageValueConverter}}"/>
+            <local:PageViewer
+                CurrentPage="{Binding ApplicationViewModel.CurrentPage,
+                                Source={x:Static local:ViewModelLocator.Instance}}"
+                />
         </Grid>
     </Border>
 </Window>
