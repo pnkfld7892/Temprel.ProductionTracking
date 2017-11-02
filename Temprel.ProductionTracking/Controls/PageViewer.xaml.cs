@@ -37,10 +37,10 @@ namespace Temprel.ProductionTracking
         /// Registers <see cref="CurrentPage"/> as a dependancy property
         /// </summary>
         public static readonly DependencyProperty CurrentPageProperty =
-            DependencyProperty.Register(nameof(CurrentPage), 
-                typeof(ApplicationPage), 
-                typeof(PageViewer), 
-                new UIPropertyMetadata(default(ApplicationPage), 
+            DependencyProperty.Register(nameof(CurrentPage),
+                typeof(ApplicationPage),
+                typeof(PageViewer),
+                new UIPropertyMetadata(default(ApplicationPage),
                     null, CurrentPagePropertyChanged));
 
         /// <summary>

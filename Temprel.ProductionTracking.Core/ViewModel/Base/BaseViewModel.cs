@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Temprel.ProductionTracking.Core
 {
@@ -18,6 +19,10 @@ namespace Temprel.ProductionTracking.Core
         public void OnPropertyChanged(string name)
         {
             PropertyChanged(this, new PropertyChangedEventArgs(name));
+            Console.WriteLine("Property {0} changed",name);
+            Console.WriteLine("The current application page is {0}",IoC.Get<ApplicationViewModel>().CurrentPage);
+            Console.WriteLine("-----------------------------------------------------------------------------------");
+
         }
 
         #region Command Helpers

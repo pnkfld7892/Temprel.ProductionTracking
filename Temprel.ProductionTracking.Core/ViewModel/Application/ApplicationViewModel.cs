@@ -1,14 +1,24 @@
-﻿namespace Temprel.ProductionTracking.Core
+﻿using System;
+
+namespace Temprel.ProductionTracking.Core
 {
     ///<summary>
     ///
     ///</summary>
     public class ApplicationViewModel: BaseViewModel
     {
+        private ApplicationPage applicationPage;
         /// <summary>
         /// The Current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Login;
+        public ApplicationPage CurrentPage
+        {
+            get => applicationPage;
+             private set
+            {
+                applicationPage = value;
+            }
+        }
 
         public BaseViewModel CurrentPageViewModel { get; set; }
 
@@ -28,9 +38,15 @@
         /// <param name="page">the page to go to</param>
         public void GoToPage(ApplicationPage page, BaseViewModel viewModel = null)
         {
-            CurrentPageViewModel = viewModel;
+            SettingsMenuVisible = false;
+            //CurrentPageViewModel = viewModel;
 
-            CurrentPage = page;
+            Console.WriteLine("Current Page inside Application View Model is {0}", CurrentPage);
+            //CurrentPage = page;
+            applicationPage = page;
+            Console.WriteLine("Current Page inside Application View Model is now {0}", CurrentPage);
+            Console.WriteLine("The nameof Current Page inside Application View Model is {0}", nameof(CurrentPage));
+            Console.WriteLine("-----------------------------------------------------------------------------------");
 
             OnPropertyChanged(nameof(CurrentPage));
         }

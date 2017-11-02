@@ -21,8 +21,8 @@ namespace Temprel.ProductionTracking
             {
                 case ApplicationPage.Login:
                     return new LoginPage(viewModel as LoginViewModel);
-                //case ApplicationPage.SalesOrder:
-                //    return new SalesOrderPage();
+                case ApplicationPage.SalesOrder:
+                   return new SalesOrderPage(viewModel as SalesOrderViewModel);
                 //case ApplicationPage.ProdOrder:
                 //    return new ProdOrderPage();
                 default:
@@ -37,8 +37,8 @@ namespace Temprel.ProductionTracking
             //find the application page that matches the base page
             if (page is LoginPage)
                 return ApplicationPage.Login;
-            //if (page is SalesOrderPage)
-            //    return ApplicationPage.SalesOrder;
+            if (page is SalesOrderPage)
+               return ApplicationPage.SalesOrder;
             //if (page is ProdOrderPage)
             //    return ApplicationPage.ProdOrder;
 

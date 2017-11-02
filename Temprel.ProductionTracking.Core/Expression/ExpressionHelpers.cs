@@ -10,7 +10,7 @@ namespace Temprel.ProductionTracking.Core
     public static class ExpressionHelpers
     {
         /// <summary>
-        /// Compiles an expression and get hte functions return value
+        /// Compiles an expression and get the functions return value
         /// </summary>
         /// <typeparam name="T">Type of return value</typeparam>
         /// <param name="lambda">expression to compile</param>

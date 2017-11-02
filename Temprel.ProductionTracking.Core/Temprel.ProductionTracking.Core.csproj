@@ -64,6 +64,7 @@
     <Compile Include="ViewModel\Dialogs\BaseDialogViewModel.cs" />
     <Compile Include="ViewModel\Dialogs\MessageboxDialogViewModel.cs" />
     <Compile Include="ViewModel\Application\LoginViewModel.cs" />
+    <Compile Include="ViewModel\SalesOrder\SalesOrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />

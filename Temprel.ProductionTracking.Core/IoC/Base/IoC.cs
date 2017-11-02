@@ -55,7 +55,7 @@ namespace Temprel.ProductionTracking.Core
         }
         #endregion
         /// <summary>
-        /// Get's a serive from the IoC, of the spcified type
+        /// Get's a service from the IoC, of the specified type
         /// </summary>
         /// <typeparam name="T">The type to get</typeparam>
         /// <returns></returns>

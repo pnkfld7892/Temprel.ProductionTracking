@@ -38,9 +38,12 @@ namespace Temprel.ProductionTracking.Core
         {
             await RunCommandAsync(() => LoginIsRunning, async () =>
             {
+                Console.WriteLine("Login Button Clicked\n-------------------------------------");
                 await Task.Delay(1000);
 
                 //TODO: Login Logic once a scheme is decided on
+
+                IoC.Application.GoToPage(ApplicationPage.SalesOrder, new SalesOrderViewModel());
             });
         }
         #endregion

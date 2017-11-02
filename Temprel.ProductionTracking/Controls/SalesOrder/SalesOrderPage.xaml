@@ -1,0 +1,20 @@
+﻿<local:BasePage x:TypeArguments="core:SalesOrderViewModel" x:Class="Temprel.ProductionTracking.SalesOrderPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Temprel.ProductionTracking"
+             xmlns:core="clr-namespace:Temprel.ProductionTracking.Core;assembly=Temprel.ProductionTracking.Core"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Border Background="{StaticResource BackgroundLightGrayBrush}"
+            Padding="8">
+        <StackPanel>
+            <local:Oe_HdrControl Grid.Row="0"/>
+            <local:Oe_LineControl Grid.Row="1"/>
+            <Button Content="Test" Click="Button_Click"/>
+        </StackPanel>
+    </Border>
+    
+    
+</local:BasePage>

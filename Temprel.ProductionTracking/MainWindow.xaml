@@ -131,10 +131,16 @@
                             Viewport="0 0 800 800" ImageSource="/Images/Backgrounds/SchematicBackground.png"
                             Opacity=".08"/>
             </Grid.Background>
-            <local:PageViewer
+            <StackPanel>
+                <local:PageViewer
                 CurrentPage="{Binding ApplicationViewModel.CurrentPage,
-                                Source={x:Static local:ViewModelLocator.Instance}}"
+                                  Source={x:Static local:ViewModelLocator.Instance}}"
+                CurrentPageViewModel="{Binding ApplicationViewModel.CurrentPageViewModel,
+                                  Source={x:Static local:ViewModelLocator.Instance}}"
                 />
+                <TextBlock Text="{Binding ApplicationViewModel.CurrentPage,
+                                  Source={x:Static local:ViewModelLocator.Instance}}"/>
+            </StackPanel>
         </Grid>
     </Border>
 </Window>
