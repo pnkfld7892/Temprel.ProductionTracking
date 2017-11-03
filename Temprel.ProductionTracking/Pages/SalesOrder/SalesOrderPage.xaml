@@ -6,14 +6,20 @@
              xmlns:local="clr-namespace:Temprel.ProductionTracking"
              xmlns:core="clr-namespace:Temprel.ProductionTracking.Core;assembly=Temprel.ProductionTracking.Core"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Border Background="{StaticResource BackgroundLightGrayBrush}"
+             d:DesignHeight="300" d:DesignWidth="300"
+                Background="Transparent">
+    <Border 
             Padding="8">
-        <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <local:Oe_HdrControl Grid.Row="0"/>
-            <local:Oe_LineControl Grid.Row="1"/>
-            <Button Content="Test" Click="Button_Click"/>
-        </StackPanel>
+            <Separator Grid.Row="1" Style="{StaticResource Separator_TemprelGradient}" BorderThickness=".5"/>
+            <local:Oe_LineControl Grid.Row="2"/>
+        </Grid>
     </Border>
     
     

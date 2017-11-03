@@ -20,8 +20,8 @@ namespace Temprel.ProductionTracking
         #endregion
 
         #region Public Properties
-        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideAndFadeInFromRight;
-        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
+        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideAndFadeInFromLeft;
+        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToRight;
 
         /// <summary>
         /// The time any slide animation takes
@@ -97,6 +97,15 @@ namespace Temprel.ProductionTracking
                 case PageAnimation.SlideAndFadeInFromRight:
                     await this.SlideAndFadeInAsync(AnimationSlideDirection.Right, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width);
                     break;
+                case PageAnimation.SlideAndFadeInFromTop:
+                    await this.SlideAndFadeInAsync(AnimationSlideDirection.Top, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width);
+                    break;
+                case PageAnimation.SlideAndFadeInFromLeft:
+                    await this.SlideAndFadeInAsync(AnimationSlideDirection.Left, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width);
+                    break;
+                case PageAnimation.SlideAndFadeInFromBottom:
+                    await this.SlideAndFadeInAsync(AnimationSlideDirection.Bottom, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width);
+                    break;
             }
 
         }
@@ -118,6 +127,14 @@ namespace Temprel.ProductionTracking
                     break;
                 case PageAnimation.SlideAndFadeOutToRight:
                     await this.SlideAndFadeOutAsync(AnimationSlideDirection.Right, SlideSeconds);
+                    //this.SlideAndFadeOutToLeftAsync(SlideSeconds);
+                    break;
+                case PageAnimation.SlideAndFadeOutToTop:
+                    await this.SlideAndFadeOutAsync(AnimationSlideDirection.Top, SlideSeconds);
+                    //this.SlideAndFadeOutToLeftAsync(SlideSeconds);
+                    break;
+                case PageAnimation.SlideAndFadeOutToBottom:
+                    await this.SlideAndFadeOutAsync(AnimationSlideDirection.Bottom, SlideSeconds);
                     //this.SlideAndFadeOutToLeftAsync(SlideSeconds);
                     break;
             }

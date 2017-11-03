@@ -29,7 +29,7 @@ namespace Temprel.ProductionTracking.Core
         /// If the flag is false(indicating the fuction isn't already running) the action is run
         /// Onthe action is finished(or crashed) the flag is then reset to false
         /// </summary>
-        /// <param name="updatingFlag"> The boolean flag dfinin if the cmommand is already running</param>
+        /// <param name="updatingFlag"> The boolean flag dfinin if the command is already running</param>
         /// <param name="action">Action to run</param>
         /// <returns></returns>
         protected async Task RunCommandAsync(Expression<Func<bool>> updatingFlag, Func<Task> action)

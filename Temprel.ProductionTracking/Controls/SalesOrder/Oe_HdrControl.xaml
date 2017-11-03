@@ -5,11 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Temprel.ProductionTracking"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <TextBlock Text="Test Oe_Hdr"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="{StaticResource FontSizeXXXXLarge}"/>
-    </Grid>
+             d:DesignHeight="150" d:DesignWidth="300"
+             MaxWidth="250">
+    <Border Padding="4" 
+            Margin="10"
+            Background="{StaticResource BackgroundMediumGrayBrush}">
+        <StackPanel Orientation="Vertical">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="" Grid.Column="0" />
+                <Button Content="Test" Grid.Column="1" />
+                <Button Content="Test" Grid.Column="2" />
+            </Grid>
+        </StackPanel>
+        
+    </Border>
 </UserControl>

@@ -81,7 +81,7 @@
     <Compile Include="Controls\SalesOrder\Oe_LineControl.xaml.cs">
       <DependentUpon>Oe_LineControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\SalesOrder\SalesOrderPage.xaml.cs">
+    <Compile Include="Pages\SalesOrder\SalesOrderPage.xaml.cs">
       <DependentUpon>SalesOrderPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasePage.cs" />
@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\SalesOrder\SalesOrderPage.xaml">
+    <Page Include="Pages\SalesOrder\SalesOrderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Misc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

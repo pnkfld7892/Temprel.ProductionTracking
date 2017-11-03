@@ -10,7 +10,7 @@ namespace Temprel.ProductionTracking.Core
         /// <summary>
         /// The Current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; private set; }
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.SalesOrder;
 
         public BaseViewModel CurrentPageViewModel { get; set; }
 
