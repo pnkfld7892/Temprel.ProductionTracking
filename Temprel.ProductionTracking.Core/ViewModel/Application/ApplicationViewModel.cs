@@ -7,18 +7,10 @@ namespace Temprel.ProductionTracking.Core
     ///</summary>
     public class ApplicationViewModel: BaseViewModel
     {
-        private ApplicationPage applicationPage;
         /// <summary>
         /// The Current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage
-        {
-            get => applicationPage;
-             private set
-            {
-                applicationPage = value;
-            }
-        }
+        public ApplicationPage CurrentPage { get; private set; }
 
         public BaseViewModel CurrentPageViewModel { get; set; }
 
@@ -39,14 +31,9 @@ namespace Temprel.ProductionTracking.Core
         public void GoToPage(ApplicationPage page, BaseViewModel viewModel = null)
         {
             SettingsMenuVisible = false;
-            //CurrentPageViewModel = viewModel;
+            CurrentPageViewModel = viewModel;
 
-            Console.WriteLine("Current Page inside Application View Model is {0}", CurrentPage);
-            //CurrentPage = page;
-            applicationPage = page;
-            Console.WriteLine("Current Page inside Application View Model is now {0}", CurrentPage);
-            Console.WriteLine("The nameof Current Page inside Application View Model is {0}", nameof(CurrentPage));
-            Console.WriteLine("-----------------------------------------------------------------------------------");
+            CurrentPage = page;
 
             OnPropertyChanged(nameof(CurrentPage));
         }

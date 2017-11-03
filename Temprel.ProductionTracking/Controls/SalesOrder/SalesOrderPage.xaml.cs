@@ -34,7 +34,6 @@ namespace Temprel.ProductionTracking
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n\nButton to Switch Pages Clicked\n--------------------------------------------------------------");
             IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Login, new LoginViewModel());
         }
     }

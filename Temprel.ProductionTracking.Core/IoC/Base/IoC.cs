@@ -37,6 +37,8 @@ namespace Temprel.ProductionTracking.Core
         /// sets up IoC container and binds all info
         /// NOTE: Must be called at app startup
         /// </summary>
+        /// 
+
         public static void Setup()
         {
             //Bind all required view models

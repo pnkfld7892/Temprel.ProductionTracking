@@ -14,6 +14,10 @@ namespace Temprel.ProductionTracking.Core
         /// The user's user ID
         /// </summary>
         public string UserId { get; set; }
+
+        public string TestText { get; set; }
+
+        public int Count { get; set; }
         
         /// <summary>
         /// Flag indicating if login proceudre is currently running
@@ -36,9 +40,10 @@ namespace Temprel.ProductionTracking.Core
 
         private async Task LoginAsync(object parameter)
         {
+            Count++;
+            TestText = Count.ToString();
             await RunCommandAsync(() => LoginIsRunning, async () =>
             {
-                Console.WriteLine("Login Button Clicked\n-------------------------------------");
                 await Task.Delay(1000);
 
                 //TODO: Login Logic once a scheme is decided on

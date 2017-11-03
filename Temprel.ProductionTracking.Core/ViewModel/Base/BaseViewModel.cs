@@ -18,11 +18,7 @@ namespace Temprel.ProductionTracking.Core
 
         public void OnPropertyChanged(string name)
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
-            Console.WriteLine("Property {0} changed",name);
-            Console.WriteLine("The current application page is {0}",IoC.Get<ApplicationViewModel>().CurrentPage);
-            Console.WriteLine("-----------------------------------------------------------------------------------");
-
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
 
         #region Command Helpers
