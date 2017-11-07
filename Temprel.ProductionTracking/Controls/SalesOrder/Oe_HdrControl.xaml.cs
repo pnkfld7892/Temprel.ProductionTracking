@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Temprel.ProductionTracking.Core;
 
 namespace Temprel.ProductionTracking
 {
@@ -23,6 +24,7 @@ namespace Temprel.ProductionTracking
         public Oe_HdrControl()
         {
             InitializeComponent();
+            DataContext = new Order_HdrViewModel { OrderNo = new NumberEntryViewModel { LabelText = "Order no:" } };
         }
     }
 }

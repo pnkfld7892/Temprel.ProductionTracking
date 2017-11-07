@@ -81,6 +81,9 @@
     <Compile Include="Controls\SalesOrder\Oe_LineControl.xaml.cs">
       <DependentUpon>Oe_LineControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TextEntry\NumberEntryControl.xaml.cs">
+      <DependentUpon>NumberEntryControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SalesOrder\SalesOrderPage.xaml.cs">
       <DependentUpon>SalesOrderPage.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\SalesOrder\Oe_LineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TextEntry\NumberEntryControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

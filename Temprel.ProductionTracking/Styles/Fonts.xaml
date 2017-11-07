@@ -23,5 +23,7 @@
     <system:Double x:Key="FontSizeXXLarge">22</system:Double>
     <system:Double x:Key="FontSizeXXXLarge">30</system:Double>
     <system:Double x:Key="FontSizeXXXXLarge">40</system:Double>
+
+    <system:String x:Key="FontAwesomeCheck">&#xf00c;</system:String>
     
 </ResourceDictionary>
