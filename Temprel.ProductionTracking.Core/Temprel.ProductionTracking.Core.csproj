@@ -63,8 +63,10 @@
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModel\Dialogs\BaseDialogViewModel.cs" />
+    <Compile Include="ViewModel\Dialogs\Design\MessageBoxDialogDesignModel.cs" />
     <Compile Include="ViewModel\Dialogs\MessageboxDialogViewModel.cs" />
     <Compile Include="ViewModel\Application\LoginViewModel.cs" />
+    <Compile Include="ViewModel\Input\BaseInputViewModel.cs" />
     <Compile Include="ViewModel\Input\Design\NumberEntryDesignModel.cs" />
     <Compile Include="ViewModel\Input\Design\TextEntryDesignModel.cs" />
     <Compile Include="ViewModel\Input\NumberEntryViewModel.cs" />

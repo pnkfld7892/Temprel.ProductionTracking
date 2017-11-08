@@ -31,8 +31,7 @@ namespace Temprel.ProductionTracking
         {
             IoC.Setup();
 
-            //TODO: create UIManager class and turn this binding on
-            //IoC.Kernel.Bind<IUIManager>().ToConstant(new UIManager());
+            IoC.Kernel.Bind<IUIManager>().ToConstant(new UIManager());
         }
     }
 }

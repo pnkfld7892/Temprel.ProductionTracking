@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temprel.ProductionTracking"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temprel.ProductionTracking.Core", "Temprel.ProductionTracking.Core\Temprel.ProductionTracking.Core.csproj", "{E6ED892B-4D86-42F1-9546-F517AA89215B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temprel.ProductionTracking.Data", "..\..\..\Visual Studio 2015\Projects\TemprelProductionTracking\Data\Temprel.ProductionTracking.Data.csproj", "{07D62786-6E5E-482F-9695-9EDEEDCAB10C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temprel.ProductionTracking.Data", "Data\Temprel.ProductionTracking.Data.csproj", "{6C57DEE9-4ECC-4BE3-A65C-EE25BC678CA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E6ED892B-4D86-42F1-9546-F517AA89215B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6ED892B-4D86-42F1-9546-F517AA89215B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6ED892B-4D86-42F1-9546-F517AA89215B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07D62786-6E5E-482F-9695-9EDEEDCAB10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07D62786-6E5E-482F-9695-9EDEEDCAB10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07D62786-6E5E-482F-9695-9EDEEDCAB10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07D62786-6E5E-482F-9695-9EDEEDCAB10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C57DEE9-4ECC-4BE3-A65C-EE25BC678CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C57DEE9-4ECC-4BE3-A65C-EE25BC678CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C57DEE9-4ECC-4BE3-A65C-EE25BC678CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C57DEE9-4ECC-4BE3-A65C-EE25BC678CA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,14 +8,11 @@ using System.Windows.Input;
 
 namespace Temprel.ProductionTracking.Core
 {
-    public class NumberEntryViewModel : BaseViewModel
+    public class NumberEntryViewModel : BaseInputViewModel
     {
-        public string LabelText { get; set; }
-
-
-        public string NoString { get; set; }
-
-        public ICommand SubmitCommand { get; set; }
+        #region Public Properties
+        public int Number { get; set; }
+        #endregion
 
         public NumberEntryViewModel()
         {
@@ -26,13 +23,35 @@ namespace Temprel.ProductionTracking.Core
 
         public event EventHandler<EventArgs> NumberSubmitted;
 
-        private void Submit()
+        protected override void Submit()
         {
             //TODO: Implement firing of event for submit
             //NOTE: This is quick and dirty testing to make sure this was firing
             //MessageBox.Show(String.Format("Submitting Order: {0}", NoString), "Test Please Clean me up later");
+            if (!String.IsNullOrEmpty(NoString))
+            {
+                try
+                {
+                    Number = int.Parse(NoString);
+                    OnNumberSubmitted();
+                }
+                catch (Exception ex)
+                {
+                    if (ex.GetType() == typeof(ArgumentNullException))
+                    {
+                        IoC.UI.ShowMessage( new MessageBoxDialogViewModel
+                        {
+                            Title = "No number!",
+                            Message = "You need to enter a number!"
+                        });
+                    }
+                }
+            }
+            else
+            {
+                return;
+            }
 
-            OnNumberSubmitted();
         }
 
         protected virtual void OnNumberSubmitted()
