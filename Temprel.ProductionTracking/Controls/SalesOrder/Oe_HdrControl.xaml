@@ -27,6 +27,6 @@
                     DataContext="{Binding OrderNo}"/>
             </Grid>
         </StackPanel>
-        
+
     </Border>
 </UserControl>

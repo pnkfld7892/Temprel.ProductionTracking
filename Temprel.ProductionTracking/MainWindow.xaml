@@ -77,6 +77,7 @@
                                                     <TextBlock/>
                                                     <TextBlock Text="Temprel Production Tracking"
                                                                FontFamily="{StaticResource FallingSky}"
+                                                               Foreground="{StaticResource ForegroundBlackBrush}"
                                                                FontSize="{StaticResource FontSizeXXXXLarge}"
                                                                VerticalAlignment="Center"
                                                                HorizontalAlignment="Center"
@@ -90,12 +91,15 @@
                                             <!--Window Buttons-->
                                             <StackPanel Grid.Column="2" Orientation="Horizontal">
                                                 <Button Content="__"
+                                                               Foreground="{StaticResource ForegroundBlackBrush}"
                                                         Style="{StaticResource WindowControlButton}"
                                                         Command="{Binding MinimizeCommand}"/>
                                                 <Button Content="[ ]"
+                                                               Foreground="{StaticResource ForegroundBlackBrush}"
                                                         Style="{StaticResource WindowControlButton}"
                                                         Command="{Binding MaximizeCommand}"/>
                                                 <Button Content="X"
+                                                               Foreground="{StaticResource ForegroundBlackBrush}"
                                                         Style="{StaticResource WindowCloseButton}"
                                                         Command="{Binding CloseCommand}"/>
                                             </StackPanel>

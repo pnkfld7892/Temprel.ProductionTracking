@@ -24,7 +24,8 @@ namespace Temprel.ProductionTracking
         public Oe_HdrControl()
         {
             InitializeComponent();
-            DataContext = new Order_HdrViewModel { OrderNo = new NumberEntryViewModel { LabelText = "Order no:" } };
+            //TODO: clean up this fast and dirty test of eventing
+            DataContext = new Order_HdrViewModel(new NumberEntryViewModel { LabelText = "Order No:" });
         }
     }
 }
