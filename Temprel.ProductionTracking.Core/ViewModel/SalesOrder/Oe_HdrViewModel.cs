@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Temprel.ProductionTracking.Data;
 
 namespace Temprel.ProductionTracking.Core
 {
@@ -36,7 +36,7 @@ namespace Temprel.ProductionTracking.Core
             PromiseDate.ContentText = DateTime.Today.AddDays(14).ToShortDateString();
             Console.WriteLine("Number Submitted: {0}", OrderNo.InputString);
             IoC.UI.ShowMessage(new MessageBoxDialogViewModel { Title = "No Submitted!", Message = String.Format("Order No: {0} submitted", orderNo.Number), OkText = "Continue" });
-            OrderNo.InputString = string.Empty;
+            //OrderNo.InputString = string.Empty;
         }
     }
 }

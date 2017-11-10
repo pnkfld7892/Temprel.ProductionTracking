@@ -10,7 +10,7 @@ namespace Temprel.ProductionTracking
     /// <summary>
     /// Interaction logic for NumberEntry.xaml
     /// </summary>
-    public partial class NumberEntryControl : UserControl
+    public partial class NumberEntryControl : BaseLabelControl
     {
 
         #region Dependency Properties
@@ -18,12 +18,13 @@ namespace Temprel.ProductionTracking
         /// The Label Width of the control
         /// </summary>
 
-        public GridLength LabelWidth
+        public override GridLength LabelWidth
         {
             get => (GridLength)GetValue(LabelWidthProperty);
             set => SetValue(LabelWidthProperty, value);
         }
 
+        public override TextBlock LabelRef => Label;
         // Using a DependencyProperty as the backing store for LabelWidth.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LabelWidthProperty =
             DependencyProperty.Register("LabelWidth", typeof(GridLength), typeof(NumberEntryControl), new PropertyMetadata(GridLength.Auto, LabelWidthChangedCallback));
@@ -78,5 +79,10 @@ namespace Temprel.ProductionTracking
             }
         }
         #endregion
+
+        private void Input_TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Input_TextBox.Text = string.Empty;
+        }
     }
 }

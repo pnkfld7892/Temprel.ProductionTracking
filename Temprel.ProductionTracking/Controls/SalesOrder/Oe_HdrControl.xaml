@@ -24,14 +24,13 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <local:NumberEntryControl
+                <StackPanel
                     Grid.Row="0"
+                    local:BaseLabelWidthMatcherProperty.Value="True"
+                >
+                <local:NumberEntryControl
                     DataContext="{Binding OrderNo}"
                     />
-                <StackPanel
-                    Grid.Row="1"
-                    local:InformationViewWidthMatcherProperty.Value="True"
-                >
                 <local:InformationViewControl
                         DataContext="{Binding CustomerId}"/>
                     <local:InformationViewControl

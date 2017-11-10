@@ -83,6 +83,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\oe_hdr.cs" />
     <Compile Include="Entities\oe_line.cs" />
+    <Compile Include="Models\Oe_HdrModel.cs" />
     <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\status.cs" />

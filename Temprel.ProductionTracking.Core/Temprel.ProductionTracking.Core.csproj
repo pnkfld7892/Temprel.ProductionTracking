@@ -86,6 +86,12 @@
   <ItemGroup>
     <Folder Include="ViewModel\Application\Design\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Temprel.ProductionTracking.Data.csproj">
+      <Project>{6c57dee9-4ecc-4be3-a65c-ee25bc678ca0}</Project>
+      <Name>Temprel.ProductionTracking.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.2.0\build\net452\Fody.targets" Condition="Exists('..\packages\Fody.2.2.0\build\net452\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

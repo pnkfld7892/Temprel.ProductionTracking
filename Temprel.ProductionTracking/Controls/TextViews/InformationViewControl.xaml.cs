@@ -19,19 +19,27 @@ namespace Temprel.ProductionTracking
     /// <summary>
     /// Interaction logic for InformationViewControl.xaml
     /// </summary>
-    public partial class InformationViewControl : UserControl
+    public partial class InformationViewControl : BaseLabelControl
     {
+        #region Ctor
+        public InformationViewControl()
+        {
+            InitializeComponent();
+        }
+        #endregion
 
         #region Dependency Properties
         /// <summary>
         /// The Label Width of the control
         /// </summary>
 
-        public GridLength LabelWidth
+        public override  GridLength LabelWidth
         {
             get => (GridLength)GetValue(LabelWidthProperty);
             set => SetValue(LabelWidthProperty, value);
         }
+
+        public override TextBlock LabelRef => Label;
 
         // Using a DependencyProperty as the backing store for LabelWidth.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LabelWidthProperty =
@@ -41,12 +49,6 @@ namespace Temprel.ProductionTracking
         #endregion
 
 
-        #region Ctor
-        public InformationViewControl()
-        {
-            InitializeComponent();
-        } 
-        #endregion
 
         #region Depedency Callbacks
         /// <summary>

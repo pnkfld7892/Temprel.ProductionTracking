@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Temprel.ProductionTracking.InformationViewControl"
+﻿<local:BaseLabelControl x:Class="Temprel.ProductionTracking.InformationViewControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -27,6 +27,6 @@
                        Foreground="{StaticResource ForegroundBlackBrush}"
                        Margin="10 12"
                        VerticalAlignment="Center"/>
-        </Grid> 
+        </Grid>
     </Border>
-</UserControl>
+</local:BaseLabelControl>
