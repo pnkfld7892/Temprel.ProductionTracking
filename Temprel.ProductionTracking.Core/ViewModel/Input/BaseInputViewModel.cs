@@ -12,7 +12,7 @@ namespace Temprel.ProductionTracking.Core
         public string LabelText { get; set; }
 
 
-        public string NoString { get; set; }
+        public string InputString { get; set; }
 
         public ICommand SubmitCommand { get; set; }
 

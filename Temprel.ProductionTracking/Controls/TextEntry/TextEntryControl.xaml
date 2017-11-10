@@ -18,6 +18,7 @@
             <TextBlock Text="{Binding LabelText}"
                        Foreground="{StaticResource ForegroundBlackBrush}"
                        Grid.Column="0"
+                       Name="Label"
                        Margin="10 12"
                        VerticalAlignment="Center"/>
             <!--Entry box-->

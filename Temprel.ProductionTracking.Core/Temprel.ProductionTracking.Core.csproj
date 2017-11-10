@@ -71,8 +71,11 @@
     <Compile Include="ViewModel\Input\Design\TextEntryDesignModel.cs" />
     <Compile Include="ViewModel\Input\NumberEntryViewModel.cs" />
     <Compile Include="ViewModel\Input\TextEntryViewModel.cs" />
-    <Compile Include="ViewModel\SalesOrder\Order_HdrViewModel.cs" />
+    <Compile Include="ViewModel\SalesOrder\Design\Oe_HdrDesignModel.cs" />
+    <Compile Include="ViewModel\SalesOrder\Oe_HdrViewModel.cs" />
     <Compile Include="ViewModel\SalesOrder\SalesOrderViewModel.cs" />
+    <Compile Include="ViewModel\TextViews\Design\InformationViewDesignModel.cs" />
+    <Compile Include="ViewModel\TextViews\InformationViewViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />

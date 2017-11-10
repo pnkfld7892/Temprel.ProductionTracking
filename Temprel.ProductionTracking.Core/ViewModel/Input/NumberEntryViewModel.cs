@@ -28,11 +28,12 @@ namespace Temprel.ProductionTracking.Core
             //TODO: Implement firing of event for submit
             //NOTE: This is quick and dirty testing to make sure this was firing
             //MessageBox.Show(String.Format("Submitting Order: {0}", NoString), "Test Please Clean me up later");
-            if (!String.IsNullOrEmpty(NoString))
+            if (!String.IsNullOrEmpty(InputString) && !(InputString.Length > 100))
             {
                 try
                 {
-                    Number = int.Parse(NoString);
+                    
+                    Number = int.Parse(InputString);
                     OnNumberSubmitted();
                 }
                 catch (Exception ex)
@@ -45,6 +46,18 @@ namespace Temprel.ProductionTracking.Core
                             Message = "You need to enter a number!"
                         });
                     }
+                    if(ex.GetType() == typeof(FormatException))
+                    {
+                        IoC.UI.ShowMessage(new MessageBoxDialogViewModel
+                        {
+                            Title = "Bad Format",
+                            Message = "This control only accepts numbers",
+                            
+                        });
+                        InputString = string.Empty;
+                    }
+                    if (ex.GetType() == typeof(OverflowException))
+                        IoC.UI.Shutdown(ex.Message);
                 }
             }
             else

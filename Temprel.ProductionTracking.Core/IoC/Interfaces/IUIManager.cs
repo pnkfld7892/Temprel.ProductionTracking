@@ -14,5 +14,7 @@ namespace Temprel.ProductionTracking.Core
         /// <param name="viewModel">the view model</param>
         /// <returns></returns>
         Task ShowMessage(MessageBoxDialogViewModel viewModel);
+
+        Task Shutdown(string message = null);
     }
 }

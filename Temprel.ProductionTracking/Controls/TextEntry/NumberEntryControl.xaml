@@ -18,12 +18,13 @@
             <TextBlock Text="{Binding LabelText}"
                        Foreground="{StaticResource ForegroundBlackBrush}"
                        Grid.Column="0"
+                       Name="Label"
                        Margin="10 12"
                        VerticalAlignment="Center"/>
             <!--Entry box-->
             <TextBox Grid.Column="1"
                      FontSize="{StaticResource FontSizeSmall}"
-                     Text="{Binding NoString, UpdateSourceTrigger=PropertyChanged}"
+                     Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged}"
                      Foreground="{StaticResource ForegroundBlackBrush}"
                      Width="100"
                      x:Name="Input_TextBox"

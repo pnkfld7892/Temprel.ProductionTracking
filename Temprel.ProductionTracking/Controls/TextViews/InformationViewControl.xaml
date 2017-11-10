@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Temprel.ProductionTracking.InformationViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Temprel.ProductionTracking"
+             xmlns:core="clr-namespace:Temprel.ProductionTracking.Core;assembly=Temprel.ProductionTracking.Core"
+             mc:Ignorable="d" 
+             d:DataContext="{x:Static core:InformationViewDesignModel.Instance}"
+            >
+    <Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LabelColumnDefinition" Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Label  -->
+            <TextBlock Grid.Column="0"
+                       Name="Label"
+                       Text="{Binding LabelText}"
+                       Foreground="{StaticResource ForegroundBlackBrush}"
+                       Margin="10 12"
+                       VerticalAlignment="Center"/>
+            <!-- Content  -->
+            <TextBlock Grid.Column="1"
+                       Text="{Binding ContentText}"
+                       Foreground="{StaticResource ForegroundBlackBrush}"
+                       Margin="10 12"
+                       VerticalAlignment="Center"/>
+        </Grid> 
+    </Border>
+</UserControl>

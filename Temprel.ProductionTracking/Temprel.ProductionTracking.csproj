@@ -36,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TempraChu.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.3\lib\net45\Ninject.dll</HintPath>
@@ -72,6 +75,7 @@
     <Compile Include="AttachedProperties\ButtonAttachedProperties.cs" />
     <Compile Include="AttachedProperties\FrameworkElementAnimationAttachedProperties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
+    <Compile Include="AttachedProperties\TextEntryAttachedProperties.cs" />
     <Compile Include="Controls\Dialogs\BaseDialogUserControl.cs" />
     <Compile Include="Controls\Dialogs\DialogMessageBox.xaml.cs">
       <DependentUpon>DialogMessageBox.xaml</DependentUpon>
@@ -90,6 +94,9 @@
     </Compile>
     <Compile Include="Controls\TextEntry\NumberEntryControl.xaml.cs">
       <DependentUpon>NumberEntryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextViews\InformationViewControl.xaml.cs">
+      <DependentUpon>InformationViewControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="DialogWindow.xaml.cs">
       <DependentUpon>DialogWindow.xaml</DependentUpon>
@@ -131,6 +138,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TextEntry\NumberEntryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TextViews\InformationViewControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -256,6 +267,9 @@
       <Project>{e6ed892b-4d86-42f1-9546-f517aa89215b}</Project>
       <Name>Temprel.ProductionTracking.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TempraChu.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.2.0\build\net452\Fody.targets" Condition="Exists('..\packages\Fody.2.2.0\build\net452\Fody.targets')" />
