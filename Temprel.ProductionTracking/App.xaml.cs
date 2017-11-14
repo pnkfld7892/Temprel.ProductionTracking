@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Temprel.ProductionTracking.Core;
+using Temprel.ProductionTracking.Data;
 
 namespace Temprel.ProductionTracking
 {
@@ -32,6 +33,9 @@ namespace Temprel.ProductionTracking
             IoC.Setup();
 
             IoC.Kernel.Bind<IUIManager>().ToConstant(new UIManager());
+
+            //Bind to a single instance of Data.TemprelEntities
+            IoC.Kernel.Bind<Data.TmprlBusinessContext>().ToConstant(new Data.TmprlBusinessContext());
         }
     }
 }

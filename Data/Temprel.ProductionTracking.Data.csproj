@@ -54,31 +54,13 @@
     <Compile Include="Entities\customer.cs" />
     <Compile Include="Entities\prod_order_hdr.cs" />
     <Compile Include="Entities\prod_order_line.cs" />
-    <Compile Include="Migrations\201704251813153_init.cs" />
-    <Compile Include="Migrations\201704251813153_init.Designer.cs" />
-    <Compile Include="Migrations\201704251905065_addStatusTableAndFK_in_oe_line.cs" />
-    <Compile Include="Migrations\201704251905065_addStatusTableAndFK_in_oe_line.Designer.cs" />
-    <Compile Include="Migrations\201704251907555_InsertStatuses.cs" />
-    <Compile Include="Migrations\201704251907555_InsertStatuses.Designer.cs" />
-    <Compile Include="Migrations\201704251913218_Add_status_ID_FKTo_oe_line.cs" />
-    <Compile Include="Migrations\201704251913218_Add_status_ID_FKTo_oe_line.Designer.cs" />
-    <Compile Include="Migrations\201704251914476_removeVirtualFromStatusIn_oe_line.cs" />
-    <Compile Include="Migrations\201704251914476_removeVirtualFromStatusIn_oe_line.Designer.cs" />
-    <Compile Include="Migrations\201704282005501_Add_Default_Constraint_To_oe_line_status_id.cs" />
-    <Compile Include="Migrations\201704282005501_Add_Default_Constraint_To_oe_line_status_id.Designer.cs">
-      <DependentUpon>201704282005501_Add_Default_Constraint_To_oe_line_status_id.cs</DependentUpon>
+    <Compile Include="Migrations\201711141714330_newinit.cs" />
+    <Compile Include="Migrations\201711141714330_newinit.Designer.cs">
+      <DependentUpon>201711141714330_newinit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705021946325_AddPromiseDateToOeHdr.cs" />
-    <Compile Include="Migrations\201705021946325_AddPromiseDateToOeHdr.Designer.cs">
-      <DependentUpon>201705021946325_AddPromiseDateToOeHdr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705041341395_AddProductionOrderHeader_LineClassesAndDBSets.cs" />
-    <Compile Include="Migrations\201705041341395_AddProductionOrderHeader_LineClassesAndDBSets.Designer.cs">
-      <DependentUpon>201705041341395_AddProductionOrderHeader_LineClassesAndDBSets.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705041413400_addDefaultConstriaintToProdOrderLine_status_id.cs" />
-    <Compile Include="Migrations\201705041413400_addDefaultConstriaintToProdOrderLine_status_id.Designer.cs">
-      <DependentUpon>201705041413400_addDefaultConstriaintToProdOrderLine_status_id.cs</DependentUpon>
+    <Compile Include="Migrations\201711141738046_InsertStatuses.cs" />
+    <Compile Include="Migrations\201711141738046_InsertStatuses.Designer.cs">
+      <DependentUpon>201711141738046_InsertStatuses.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\oe_hdr.cs" />
@@ -95,22 +77,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704251813153_init.resx" />
-    <EmbeddedResource Include="Migrations\201704251905065_addStatusTableAndFK_in_oe_line.resx" />
-    <EmbeddedResource Include="Migrations\201704251907555_InsertStatuses.resx" />
-    <EmbeddedResource Include="Migrations\201704251913218_Add_status_ID_FKTo_oe_line.resx" />
-    <EmbeddedResource Include="Migrations\201704251914476_removeVirtualFromStatusIn_oe_line.resx" />
-    <EmbeddedResource Include="Migrations\201704282005501_Add_Default_Constraint_To_oe_line_status_id.resx">
-      <DependentUpon>201704282005501_Add_Default_Constraint_To_oe_line_status_id.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711141714330_newinit.resx">
+      <DependentUpon>201711141714330_newinit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705021946325_AddPromiseDateToOeHdr.resx">
-      <DependentUpon>201705021946325_AddPromiseDateToOeHdr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705041341395_AddProductionOrderHeader_LineClassesAndDBSets.resx">
-      <DependentUpon>201705041341395_AddProductionOrderHeader_LineClassesAndDBSets.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705041413400_addDefaultConstriaintToProdOrderLine_status_id.resx">
-      <DependentUpon>201705041413400_addDefaultConstriaintToProdOrderLine_status_id.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711141738046_InsertStatuses.resx">
+      <DependentUpon>201711141738046_InsertStatuses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

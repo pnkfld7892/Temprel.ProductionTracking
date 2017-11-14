@@ -30,6 +30,17 @@ namespace Temprel.ProductionTracking.Data
             
         }
 
+        public Oe_HdrModel GetOe_Hdr(string orderNo)
+        {
+            if (context.oe_hdr.Find(orderNo) != null)
+            {
+                oe_hdr tmpHdr = context.oe_hdr.Where(h => h.order_no == orderNo).FirstOrDefault();
+                customer tmpCust = context.customers.Where(c => c.customer_id == tmpHdr.customer_id).FirstOrDefault();
+                return new Oe_HdrModel(tmpHdr, tmpCust);
+            }
+            else throw new ArgumentException("Order Not Found!");
+        }
+
         public bool IsSalesOrder(string orderNo)
         {
             var isOrder = context.oe_hdr.Find(orderNo);

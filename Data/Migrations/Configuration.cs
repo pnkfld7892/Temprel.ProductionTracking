@@ -1,4 +1,4 @@
-namespace Data.Migrations
+namespace Temprel.ProductionTracking.Data.Migrations
 {
     using System;
     using System.Data.Entity;

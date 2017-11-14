@@ -40,6 +40,12 @@
     <ApplicationIcon>TempraChu.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.3\lib\net45\Ninject.dll</HintPath>
     </Reference>
@@ -48,6 +54,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +82,7 @@
     <Compile Include="AttachedProperties\ButtonAttachedProperties.cs" />
     <Compile Include="AttachedProperties\FrameworkElementAnimationAttachedProperties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
+    <Compile Include="AttachedProperties\TextAttachedProperties.cs" />
     <Compile Include="AttachedProperties\TextEntryAttachedProperties.cs" />
     <Compile Include="Controls\Base\BaseLabelControl.cs" />
     <Compile Include="Controls\Dialogs\BaseDialogUserControl.cs" />
@@ -264,6 +272,10 @@
     <Resource Include="Images\Icons\temprelLogo.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Data\Temprel.ProductionTracking.Data.csproj">
+      <Project>{6c57dee9-4ecc-4be3-a65c-ee25bc678ca0}</Project>
+      <Name>Temprel.ProductionTracking.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Temprel.ProductionTracking.Core\Temprel.ProductionTracking.Core.csproj">
       <Project>{e6ed892b-4d86-42f1-9546-f517aa89215b}</Project>
       <Name>Temprel.ProductionTracking.Core</Name>
@@ -272,7 +284,9 @@
   <ItemGroup>
     <Resource Include="TempraChu.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\GridViews\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.2.0\build\net452\Fody.targets" Condition="Exists('..\packages\Fody.2.2.0\build\net452\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,5 +1,5 @@
 ﻿using Ninject;
-
+using Temprel.ProductionTracking.Data;
 namespace Temprel.ProductionTracking.Core
 {
     ///<summary>
@@ -28,6 +28,8 @@ namespace Temprel.ProductionTracking.Core
         /// </summary>
         public static SettingsViewModel Settings => IoC.Get<SettingsViewModel>();
 
+        public static Data.TmprlBusinessContext Context => IoC.Get<TmprlBusinessContext>();
+
 
         #endregion
 
@@ -42,18 +44,18 @@ namespace Temprel.ProductionTracking.Core
         public static void Setup()
         {
             //Bind all required view models
-            BindViewModels();
+            BindAllIoCObjects();
         }
         /// <summary>
         /// Binds All singleton viewmodels
         /// </summary>
-        private static void BindViewModels()
+        private static void BindAllIoCObjects()
         {
             //bind to a single instance of application view model
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
             //bind to a single instance of settings view model
             Kernel.Bind<SettingsViewModel>().ToConstant(new SettingsViewModel());
-            //Bind
+
         }
         #endregion
         /// <summary>

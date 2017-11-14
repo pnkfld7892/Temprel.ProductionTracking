@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,10 @@ namespace Temprel.ProductionTracking.Core
                     }
                     if (ex.GetType() == typeof(OverflowException))
                         IoC.UI.Shutdown(ex.Message);
+                    else
+                    {
+                        throw ex;
+                    }
                 }
             }
             else
