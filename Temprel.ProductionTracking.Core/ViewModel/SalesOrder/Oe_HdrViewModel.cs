@@ -25,6 +25,8 @@ namespace Temprel.ProductionTracking.Core
         public InformationViewViewModel CustomerName { get; set; }
         public InformationViewViewModel OrderDate { get; set; }
         public InformationViewViewModel PromiseDate { get; set; }
+
+        public Oe_HdrViewModel test { get; set; }
         #endregion
 
         #region Ctor
@@ -35,9 +37,19 @@ namespace Temprel.ProductionTracking.Core
             OrderNo.NumberSubmitted += OnNumberSubmitted;
         }
 
-        
+
         #endregion
 
+        #region Event Handlers
+
+        public event EventHandler<EventArgs> OrderHeaderLoaded;
+
+        public virtual void OnOrderHeaderLoaded()
+        {
+            OrderHeaderLoaded?.Invoke(this, EventArgs.Empty);
+        }
+
+        #endregion
 
         #region Methods
         public void OnNumberSubmitted(object source, EventArgs e)

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Temprel.ProductionTracking.Oe_LineControl"
+﻿<UserControl x:Class="Temprel.ProductionTracking.ItemsListWithComboBoxControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,9 +11,9 @@
                       AutoGenerateColumns="False" IsReadOnly="False" x:Name="LinesGrid" >
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Line Num" Binding="{Binding line_no, StringFormat={}{0:n0}}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Item ID" Binding="{Binding item_id}" IsReadOnly="True"/>
-                <DataGridTemplateColumn Header="Status">
+                <DataGridTextColumn Header="{Binding Column1Header}" Binding="{Binding line_no, StringFormat={}{0:n0}}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{Binding Column2Header}" Binding="{Binding item_id}" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="{Binding Column3Header}">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <ComboBox ItemsSource="{Binding Path=DataContext.Statuses, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"

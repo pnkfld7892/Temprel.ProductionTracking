@@ -12,21 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Temprel.ProductionTracking.Core;
 
 namespace Temprel.ProductionTracking
 {
     /// <summary>
-    /// Interaction logic for SalesOrderPage.xaml
+    /// Interaction logic for ItemsListWithComboBoxControl.xaml
     /// </summary>
-    public partial class SalesOrderPage : BasePage<SalesOrderViewModel>
+    public partial class ItemsListWithComboBoxControl : UserControl
     {
-        public SalesOrderPage()
-        {
-            InitializeComponent();
-        }
-
-        public SalesOrderPage(SalesOrderViewModel viewModel):base(viewModel)
+        public ItemsListWithComboBoxControl()
         {
             InitializeComponent();
         }
