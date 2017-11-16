@@ -17,6 +17,11 @@ namespace Temprel.ProductionTracking.Data
             context = new TemprelEntities();
         }
 
+        /// <summary>
+        /// Old code
+        /// </summary>
+        /// <param name="orderNo"></param>
+        /// <returns></returns>
         public OrderModel GetOrder(string orderNo)
         {
             if (context.oe_hdr.Find(orderNo) != null)
@@ -30,6 +35,11 @@ namespace Temprel.ProductionTracking.Data
             
         }
 
+        /// <summary>
+        /// Returns an Oe_HdrModel object if found
+        /// </summary>
+        /// <param name="orderNo">The order Number to look for</param>
+        /// <returns><see cref="Oe_HdrModel"/></returns>
         public Oe_HdrModel GetOe_Hdr(string orderNo)
         {
             if (context.oe_hdr.Find(orderNo) != null)
@@ -39,6 +49,22 @@ namespace Temprel.ProductionTracking.Data
                 return new Oe_HdrModel(tmpHdr, tmpCust);
             }
             else throw new ArgumentException("Order Not Found!");
+        }
+
+        /// <summary>
+        /// Returns an Oe_lineModel object if found
+        /// </summary>
+        /// <param name="orderNo">The order number to search for</param>
+        /// <returns></returns>
+        public Oe_LineModel GetOe_Line(string orderNo)
+        {
+            if (context.oe_hdr.Find(orderNo) != null)
+            {
+                ICollection<oe_line> tmpLines = context.oe_line.Where(l => l.oe_hdr.order_no == orderNo).ToArray();
+                return new Oe_LineModel(tmpLines);
+            }
+            else
+                throw new ArgumentException("Order Not Found!");
         }
 
         public bool IsSalesOrder(string orderNo)

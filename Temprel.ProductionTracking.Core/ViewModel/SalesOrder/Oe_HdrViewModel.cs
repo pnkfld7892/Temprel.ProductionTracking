@@ -42,11 +42,11 @@ namespace Temprel.ProductionTracking.Core
 
         #region Event Handlers
 
-        public event EventHandler<EventArgs> OrderHeaderLoaded;
+        public event EventHandler<OrderHeaderLoadedEventArgs> OrderHeaderLoaded;
 
         public virtual void OnOrderHeaderLoaded()
         {
-            OrderHeaderLoaded?.Invoke(this, EventArgs.Empty);
+            OrderHeaderLoaded?.Invoke(this, new OrderHeaderLoadedEventArgs(hdrModel.Hdr.order_no));
         }
 
         #endregion
@@ -77,6 +77,7 @@ namespace Temprel.ProductionTracking.Core
                 //order information
                 OrderDate.ContentText = (hdrModel.Hdr.order_date).Value.ToShortDateString();
                 PromiseDate.ContentText = (hdrModel.Hdr.promised_date).Value.ToShortDateString();
+                OrderHeaderLoaded(this,new OrderHeaderLoadedEventArgs(hdrModel.Hdr.order_no));
             }
             catch(ArgumentException ex)
             {

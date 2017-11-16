@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModels\ApplicationPage.cs" />
+    <Compile Include="EventArgs\OrderHeaderLoadedEventArgs.cs" />
     <Compile Include="Expression\ExpressionHelpers.cs" />
     <Compile Include="IoC\Base\IoC.cs" />
     <Compile Include="IoC\Interfaces\IUIManager.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="ViewModel\Input\NumberEntryViewModel.cs" />
     <Compile Include="ViewModel\Input\TextEntryViewModel.cs" />
     <Compile Include="ViewModel\SalesOrder\Design\Oe_HdrDesignModel.cs" />
+    <Compile Include="ViewModel\SalesOrder\Design\Oe_LineDesignModel.cs" />
+    <Compile Include="ViewModel\SalesOrder\Design\SalesOrderDesignModel.cs" />
     <Compile Include="ViewModel\SalesOrder\Oe_HdrViewModel.cs" />
     <Compile Include="ViewModel\SalesOrder\Oe_LineViewModel.cs" />
     <Compile Include="ViewModel\SalesOrder\SalesOrderViewModel.cs" />

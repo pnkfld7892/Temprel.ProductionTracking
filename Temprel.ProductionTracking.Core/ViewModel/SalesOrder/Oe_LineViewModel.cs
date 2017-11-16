@@ -24,6 +24,8 @@ namespace Temprel.ProductionTracking.Core
 
         public Oe_LineModel Oe_LineModel { get; set; }
 
+        public ICollection<Data.Entities.oe_line> Lines { get => Oe_LineModel.Lines; }
+
         #region Contstructor
         public Oe_LineViewModel()
         {
@@ -39,11 +41,12 @@ namespace Temprel.ProductionTracking.Core
         #endregion
 
         #region events
-        public void OnOrderHeaderLoaded(object source, EventArgs e)
+        public void OnOrderHeaderLoaded(object source, OrderHeaderLoadedEventArgs e)
         {
             //TODO: Load data 
 
-            Console.WriteLine("Yeah we got to OnOrderHeaderLoaded inside Oe_LineViewModel");
+            Console.WriteLine("Yeah we got to OnOrderHeaderLoaded inside Oe_LineViewModel\nOrder No: {0}",e.OrderNo);
+            Oe_LineModel = IoC.Context.GetOe_Line(e.OrderNo);
         }
         #endregion
     }
