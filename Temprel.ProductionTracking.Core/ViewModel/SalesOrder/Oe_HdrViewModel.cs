@@ -85,6 +85,25 @@ namespace Temprel.ProductionTracking.Core
             }
         }
 
+        public void OnOrderUpdated(object sender, EventArgs e)
+        {
+            //IoC.UI.ShowMessage(new MessageBoxDialogViewModel { Message ="Hit inside Oe_HdrVM" });
+            Clear();
+        }
+
+        private void Clear()
+        {
+            OrderNo.InputString = string.Empty;
+            hdrModel = new Oe_HdrModel();
+            //customer information
+            CustomerId.ContentText = String.Empty;
+            CustomerName.ContentText = String.Empty;
+
+            //order information
+            OrderDate.ContentText = String.Empty;
+            PromiseDate.ContentText = String.Empty;
+        }
+
         private void SetupInformationViewModels()
         {
             CustomerId = new InformationViewViewModel { LabelText = "Customer ID:" };

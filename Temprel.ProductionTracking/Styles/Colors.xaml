@@ -32,4 +32,13 @@
     <Color x:Key="TemprelRed">#f13c25</Color>
     <SolidColorBrush x:Key="TemprelRedBrush" Color="{StaticResource TemprelRed}"/>
 
+    <Color x:Key="TemprelHighlightYellow">#f9d47c</Color>
+    <SolidColorBrush x:Key="TemprelHighlightYellowBrush" Color="{StaticResource TemprelHighlightYellow}"/>
+
+    <Color x:Key="TemprelHighlightOrange">#f28e59</Color>
+    <SolidColorBrush x:Key="TemprelHighlightOrangeBrush" Color="{StaticResource TemprelHighlightYellow}"/>
+
+    <Color x:Key="TemprelHighlightRed">#f47464</Color>
+    <SolidColorBrush x:Key="TemprelHighlightRedBrush" Color="{StaticResource TemprelHighlightRed}"/>
+
 </ResourceDictionary>

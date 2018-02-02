@@ -109,6 +109,16 @@ namespace Temprel.ProductionTracking.Data
             context.SaveChanges();
         }
 
+        public void UpdateOrder(Oe_LineModel lines)
+        {
+            foreach(var ln in lines.Lines)
+            {
+                context.Entry(ln).CurrentValues.SetValues(ln);
+            }
+
+            context.SaveChanges();
+        }
+
         //TODO: Create UpdateOrder that takes a Production Order
         /*
             public void UpdateOrder(ProductionOrderModel order()

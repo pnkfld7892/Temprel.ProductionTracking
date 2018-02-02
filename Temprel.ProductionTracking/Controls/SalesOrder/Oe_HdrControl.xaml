@@ -32,14 +32,14 @@
                     DataContext="{Binding OrderNo}"
                     />
                 <local:InformationViewControl
-                        DataContext="{Binding CustomerId}"/>
+                        DataContext="{Binding CustomerId,UpdateSourceTrigger=PropertyChanged}"/>
                     <local:InformationViewControl
-                        DataContext="{Binding CustomerName}"
+                        DataContext="{Binding CustomerName,UpdateSourceTrigger=PropertyChanged}"
                        />
                     <local:InformationViewControl
-                        DataContext="{Binding OrderDate}"/>
+                        DataContext="{Binding OrderDate,UpdateSourceTrigger=PropertyChanged}"/>
                     <local:InformationViewControl
-                        DataContext="{Binding PromiseDate}"/>
+                        DataContext="{Binding PromiseDate,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
 
             </Grid>

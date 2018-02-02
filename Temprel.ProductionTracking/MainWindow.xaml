@@ -129,21 +129,31 @@
             GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
     <Border Background="{StaticResource BackgroundDarkGrayBrush}">
-        <Grid >
-            <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="Absolute"
-                            Viewport="0 0 800 800" ImageSource="/Images/Backgrounds/SchematicBackground.png"
-                            Opacity=".08"/>
-            </Grid.Background>
-            <Grid>
-                <local:PageViewer
-                CurrentPage="{Binding ApplicationViewModel.CurrentPage,
-                                  Source={x:Static local:ViewModelLocator.Instance}}"
-                CurrentPageViewModel="{Binding ApplicationViewModel.CurrentPageViewModel,
-                                  Source={x:Static local:ViewModelLocator.Instance}}"
-                />
+        <StackPanel Orientation="Vertical">
+            <StackPanel Height="Auto" Orientation="Horizontal" Background="{StaticResource BackgroundLightGrayBrush}" Margin="15 0">
+                <Button Style="{StaticResource IconButton}">
+                    <StackPanel>
+                        <Image Source="/Images/Icons/Button_Clear_Close.png" Height="35"/>
+                        <TextBlock Text="Clear" TextAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Grid >
+                <Grid.Background>
+                    <ImageBrush TileMode="Tile" ViewportUnits="Absolute"
+                                Viewport="0 0 800 800" ImageSource="/Images/Backgrounds/SchematicBackground.png"
+                                Opacity=".08"/>
+                </Grid.Background>
+                <Grid>
+                    <local:PageViewer
+                    CurrentPage="{Binding ApplicationViewModel.CurrentPage,
+                                      Source={x:Static local:ViewModelLocator.Instance}}"
+                    CurrentPageViewModel="{Binding ApplicationViewModel.CurrentPageViewModel,
+                                      Source={x:Static local:ViewModelLocator.Instance}}"
+                    />
 
+                </Grid>
             </Grid>
-        </Grid>
+        </StackPanel>
     </Border>
 </Window>

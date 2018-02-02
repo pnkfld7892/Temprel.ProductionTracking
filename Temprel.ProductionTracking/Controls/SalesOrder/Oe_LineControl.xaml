@@ -7,8 +7,8 @@
              xmlns:core="clr-namespace:Temprel.ProductionTracking.Core;assembly=Temprel.ProductionTracking.Core"
              mc:Ignorable="d"
              d:DataContext="{x:Static core:Oe_LineDesignModel.Instance}"
-             d:DesignHeight="300" d:DesignWidth="300"
-             MinHeight="500">
+             MinWidth="350"
+             MaxWidth="900">
     <Border
         Margin="10"
         Padding="4"
@@ -21,8 +21,8 @@
                       x:Name="LinesGrid" 
                       Background="Transparent"
                       Padding="2"
-                      Margin="4">
-
+                      Margin="4"
+                      Height="200">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Line Num" Binding="{Binding line_no, StringFormat={}{0:n0}}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Item ID" Binding="{Binding item_id}" IsReadOnly="True"/>
@@ -62,7 +62,8 @@
                 </StackPanel>
                 <Button Grid.Column="1"
                         Foreground="{StaticResource BackgroundLightGrayBrush}"
-                        Content="Update"/>
+                        Content="Update"
+                        Command="{Binding UpdateCommand}"/>
             </Grid>
         </StackPanel>
     </Border>

@@ -262,11 +262,6 @@ namespace Temprel.ProductionTracking
                         SetWidths(panel);
                     };
 
-                    ////set margin to given value
-                    //control.Label. += (ss, eee) =>
-                    //{
-                    //    SetWidths(panel);
-                    //};
                 }
 
             };

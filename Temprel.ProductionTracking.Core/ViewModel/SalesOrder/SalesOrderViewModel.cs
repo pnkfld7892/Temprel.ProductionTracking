@@ -19,6 +19,7 @@ namespace Temprel.ProductionTracking.Core
 
             //Hook Events
            Oe_hdr.OrderHeaderLoaded += Oe_Line.OnOrderHeaderLoaded;
+            Oe_Line.OrderUpdated += Oe_hdr.OnOrderUpdated;
         }
     }
 }

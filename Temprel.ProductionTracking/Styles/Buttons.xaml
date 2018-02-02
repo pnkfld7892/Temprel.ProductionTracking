@@ -23,6 +23,15 @@
         </Setter>
     </Style>
     
+    <!-- Icon Button-->
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource Hoverless}" x:Key="IconButton">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource ForegroundHighlightBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
     <!--System Button-->
     <Style TargetType="{x:Type Button}" x:Key="SystemIconButton" BasedOn="{StaticResource Hoverless}">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>

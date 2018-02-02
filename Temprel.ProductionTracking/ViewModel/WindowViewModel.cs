@@ -35,8 +35,8 @@ namespace Temprel.ProductionTracking
         #endregion
 
         #region Public Properties
-        public double WindowMinHeight { get; set; } = 500;
-        public double WindowMinWidth { get; set; } = 800;
+        public double WindowMinHeight { get; set; } = 650;
+        public double WindowMinWidth { get; set; } = 875;
 
         /// <summary>
         /// True if the window should be borderless because it is docked or maximized
