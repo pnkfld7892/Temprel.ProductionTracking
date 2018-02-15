@@ -91,7 +91,7 @@ namespace Temprel.ProductionTracking.Core
             Clear();
         }
 
-        private void Clear()
+        public override void Clear()
         {
             OrderNo.InputString = string.Empty;
             hdrModel = new Oe_HdrModel();

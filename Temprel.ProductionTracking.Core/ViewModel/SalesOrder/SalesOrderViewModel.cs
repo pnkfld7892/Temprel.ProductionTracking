@@ -18,8 +18,14 @@ namespace Temprel.ProductionTracking.Core
             Oe_Line = new Oe_LineViewModel();
 
             //Hook Events
-           Oe_hdr.OrderHeaderLoaded += Oe_Line.OnOrderHeaderLoaded;
+            Oe_hdr.OrderHeaderLoaded += Oe_Line.OnOrderHeaderLoaded;
             Oe_Line.OrderUpdated += Oe_hdr.OnOrderUpdated;
+        }
+
+        public override void Clear()
+        {
+            Oe_hdr.Clear();
+            Oe_Line.Clear();
         }
     }
 }

@@ -80,7 +80,7 @@ namespace Temprel.ProductionTracking.Core
 
         }
 
-        private void Clear()
+        public override void Clear()
         {
             SelectedStatus = null;
             SelectedStatusBulk = null;

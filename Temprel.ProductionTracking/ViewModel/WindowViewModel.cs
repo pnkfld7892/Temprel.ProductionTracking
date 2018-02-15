@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Input;
 using Temprel.ProductionTracking.Core;
 
@@ -113,6 +114,12 @@ namespace Temprel.ProductionTracking
         public ICommand CloseCommand { get; set; }
 
         public ICommand MenuCommand { get; set; }
+
+        public RelayCommand GlobalClearCommand { get; set; }
+        #endregion
+
+        #region Events
+        public EventHandler<EventArgs> GlobalClear;
         #endregion
 
         #region Constructor
@@ -133,6 +140,7 @@ namespace Temprel.ProductionTracking
             MaximizeCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => mWindow.Close());
             MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(mWindow,GetMousePosition()));
+            GlobalClearCommand = new RelayCommand(() => OnGlobalClear());
 
             //fix window resize issue
             var resizer = new WindowResizer(mWindow);
@@ -145,8 +153,17 @@ namespace Temprel.ProductionTracking
                 //fire off resize events
                 WindowResized();
             };
+
+            this.GlobalClear += IoC.Application.OnGlobalClear;
         }
 
+        #endregion
+
+        #region Public Methods
+        public void OnGlobalClear()
+        {
+            GlobalClear?.Invoke(this, EventArgs.Empty);
+        }
         #endregion
 
         #region Private helpers

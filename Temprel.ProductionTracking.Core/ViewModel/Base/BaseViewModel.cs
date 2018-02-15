@@ -53,5 +53,9 @@ namespace Temprel.ProductionTracking.Core
             }
         }
         #endregion
+
+        public virtual void Clear() { }
+
+  
     }
 }

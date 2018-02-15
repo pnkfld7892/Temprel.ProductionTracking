@@ -10,9 +10,15 @@ namespace Temprel.ProductionTracking.Core
         /// <summary>
         /// The Current page of the application
         /// </summary>
-        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.SalesOrder;
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Login;
 
         public BaseViewModel CurrentPageViewModel { get; set; }
+
+        public void OnGlobalClear(object source,EventArgs e)
+        {
+            CurrentPageViewModel.Clear();
+        }
+        
 
         /// <summary>
         /// True if the side menu should be shown
@@ -37,5 +43,7 @@ namespace Temprel.ProductionTracking.Core
 
             OnPropertyChanged(nameof(CurrentPage));
         }
+
+        
     }
 }

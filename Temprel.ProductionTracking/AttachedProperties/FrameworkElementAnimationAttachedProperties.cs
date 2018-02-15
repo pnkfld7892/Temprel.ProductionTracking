@@ -145,6 +145,32 @@ namespace Temprel.ProductionTracking
         }
     }
 
+    public class AnimateSlideInFromTopProperty : AnimateBaseProperty<AnimateSlideInFromTopProperty>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value, bool firstLoad)
+        {
+            if (value)
+                //animate in
+                await element.SlideAndFadeInAsync(AnimationSlideDirection.Top, firstLoad, firstLoad ? 0 : 0.3f, keepMargin: false);
+            else
+                //animate out
+                await element.SlideAndFadeOutAsync(AnimationSlideDirection.Top, firstLoad ? 0 : 0.3f, keepMargin: false);
+        }
+    }
+
+    public class AnimateSlideInFromTopMarginProperty : AnimateBaseProperty<AnimateSlideInFromTopProperty>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value, bool firstLoad)
+        {
+            if (value)
+                //animate in
+                await element.SlideAndFadeInAsync(AnimationSlideDirection.Top, firstLoad, firstLoad ? 0 : 0.3f, keepMargin: true);
+            else
+                //animate out
+                await element.SlideAndFadeOutAsync(AnimationSlideDirection.Top, firstLoad ? 0 : 0.3f, keepMargin: true);
+        }
+    }
+
     /// <summary>
     /// Animates a framework element fading in on show
     /// and fading out on hide
